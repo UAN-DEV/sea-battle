@@ -1,0 +1,32 @@
+.sea-battle-container {
+  margin: 30px auto;
+  outline: 3px solid black;
+  width: 550px;
+  height: 550px;
+  display: grid;
+  grid-template: repeat(11, 1fr) / repeat(11, 1fr);
+  background-size: calc(100% / 11) calc(100% / 11);
+  background-image:
+    linear-gradient(to right, black 1px, transparent 1px),
+    linear-gradient(to bottom, black 1px, transparent 1px);
+    font-size: 25px;
+    font-weight: bold;
+}
+.nom,
+.let,
+.black {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.black {
+  background-color: black;
+  grid-area: 1/1/2/2;
+}
+.sea-battle-container > .grid-container {
+  margin: 0;
+  outline: none;
+  grid-area: 2/2/12/12;
+}

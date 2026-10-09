@@ -1,8 +1,3 @@
-@import url(../style/reset.css);
-
-* {
-  box-sizing: border-box;
-}
 .grid-container {
   margin: 30px auto;
   outline: 3px solid black;
@@ -12,7 +7,7 @@
   grid-template: repeat(10, 1fr) / repeat(10, 1fr);
 }
 .grid-container > * {
-  outline: 1px solid black;
+  border: 1px solid black;
   width: 100%;
   height: 100%;
 }
