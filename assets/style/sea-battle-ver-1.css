@@ -1,10 +1,17 @@
+:root {
+  --size-cell: 50px;
+ /* for adaptive */
+  /* --size-cell: 7vw; */
+}
+
 .grid-container {
+  --col-cell: 10;
   margin: 30px auto;
   outline: 3px solid black;
-  width: 500px;
-  height: 500px;
+  width: calc(var(--col-cell) * var(--size-cell));
+  height: calc(var(--col-cell) * var(--size-cell));
   display: grid;
-  grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+  grid-template: repeat(var(--col-cell), 1fr) / repeat(var(--col-cell), 1fr);
 }
 .grid-container > * {
   border: 1px solid black;
@@ -65,5 +72,3 @@
   background-color: #fe0200;
   grid-area: -2/5/-1/11;
 }
-
-

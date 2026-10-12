@@ -1,22 +1,23 @@
 .sea-battle-container {
+  --col-cell: 11;
   margin: 30px auto;
   outline: 3px solid black;
-  width: 550px;
-  height: 550px;
+  width: calc(var(--col-cell) * var(--size-cell));
+  height: calc(var(--col-cell) * var(--size-cell));
   display: grid;
-  grid-template: repeat(11, 1fr) / repeat(11, 1fr);
-  background-size: calc(100% / 11) calc(100% / 11);
+  grid-template: repeat(var(--col-cell), 1fr) / repeat(var(--col-cell), 1fr);
+  background-size: calc(100% / var(--col-cell)) calc(100% / var(--col-cell));
   background-image:
     linear-gradient(to right, black 1px, transparent 1px),
     linear-gradient(to bottom, black 1px, transparent 1px);
-    font-size: 25px;
-    font-weight: bold;
+  font-size: 25px;
+  font-weight: bold;
 }
 .nom,
 .let,
 .black {
-  width: 50px;
-  height: 50px;
+  width: var(--size-cell);
+  height: var(--size-cell);
   display: flex;
   justify-content: center;
   align-items: center;
